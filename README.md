@@ -38,7 +38,7 @@ A solução deve refletir boas práticas de desenvolvimento e design.
    - Adicionar um mecanismo de autenticação básico (JWT, por exemplo) para proteger os endpoints da API.
 
 4. **Banco de Dados**:
-   - Utilize um banco relacional de sua escolha (PostgreSQL, MySQL, SQL Server, etc.).
+   - Utilize um banco relacional (MySQL, SQL Server, Informix).
 
 ### Frontend
 
@@ -55,13 +55,12 @@ A solução deve refletir boas práticas de desenvolvimento e design.
 
 ## Requisitos Não Obrigatórios (Extras)
 
-1. **Docker**: Conteinerizar a aplicação.
-2. **Documentação**: Documentar a API utilizando Swagger ou similar.
-3. **Testes Automatizados**:
-   - Backend: testes unitários e/ou de integração.
-   - Frontend: testes unitários ou de interface com Jest ou outro framework.
-4. **Design**: Melhorar a interface com boas práticas de UX/UI.
-5. **Desempenho**: Implementar cache para melhorar a performance de requisições no backend.
+1. **Documentação**: Documentar a API utilizando Swagger ou similar.
+2. **Testes Automatizados**:
+   - Backend: testes unitários e/ou de integração utilizando xUnit.
+   - Frontend: testes unitários ou de interface com Jest.
+3. **Design**: Melhorar a interface com boas práticas de UX/UI.
+4. **Desempenho**: Implementar cache para melhorar a performance de requisições no backend.
 
 ---
 
