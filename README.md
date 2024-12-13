@@ -52,7 +52,7 @@ A solução deve refletir boas práticas de desenvolvimento e design.
    - Implementar validação básica dos campos no frontend.
 
 4. **Exclusão de Produtos**:
-   - Possibilidade de excluir um produto da listam.
+   - Possibilidade de excluir um produto da listagem.
 
 ---
 
