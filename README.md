@@ -51,6 +51,9 @@ A solução deve refletir boas práticas de desenvolvimento e design.
 3. **Validações**:
    - Implementar validação básica dos campos no frontend.
 
+4. **Exclusão de Produtos**:
+   - Possibilidade de excluir um produto da listam.
+
 ---
 
 ## Requisitos Não Obrigatórios (Extras)
