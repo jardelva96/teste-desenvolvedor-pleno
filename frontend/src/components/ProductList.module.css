@@ -1,0 +1,72 @@
+.productListContainer {
+    margin: 20px auto; /* Centraliza o conteúdo */
+    padding: 10px;
+    max-width: 1200px; /* Limita a largura máxima */
+    background-color: #f9f9f9; /* Fundo claro para destaque */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve */
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+    margin-top: 20px;
+}
+
+.productTable th,
+.productTable td {
+    border: 1px solid #ddd; /* Borda fina para células */
+    padding: 10px;
+    text-align: left;
+}
+
+.productTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+}
+
+.productTable td {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto escuro para legibilidade */
+    vertical-align: middle; /* Alinha o texto no centro vertical */
+}
+
+.productTable tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fundo alternado para linhas pares */
+}
+
+.productTable tr:hover {
+    background-color: #e6f7ff; /* Destaque ao passar o mouse */
+}
+
+.emptyMessage {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+button:disabled {
+    background-color: #ccc; /* Botão desabilitado */
+    cursor: not-allowed;
+}

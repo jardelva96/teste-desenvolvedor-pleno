@@ -1,0 +1,177 @@
+/* Fundo e Neve */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 30px;
+  animation: snow 10s linear infinite;
+  z-index: 999;
+}
+
+.snowflake:nth-child(odd) {
+  animation-duration: 12s;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.snowflake:nth-child(even) {
+  animation-duration: 8s;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Estilo do Contêiner */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Árvore de Natal Animada */
+.tree {
+  font-size: 60px;
+  color: #008000;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Formulário de Login */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+/* Botões e Formulário */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.submit-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Social Login */
+.social-login {
+  margin-top: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-btn {
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.google {
+  background-color: #db4437;
+  color: white;
+}
+
+.switch-form {
+  margin-top: 20px;
+}
+
+.switch-form button {
+  border: none;
+  background: none;
+  color: #2575fc;
+  cursor: pointer;
+}
+
+.switch-form button:hover {
+  text-decoration: underline;
+}
