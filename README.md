@@ -102,7 +102,7 @@ npm install --legacy-peer-deps
 npm start
 ```
 ## Para o Backend
-Certifique-se de ter o .NET Core SDK instalado. Navegue até a pasta backend e restaure as dependências:
+Certifique-se de ter o .NET Core SDK instalado.
 ```bash
 cd backend
 dotnet run
