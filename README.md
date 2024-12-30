@@ -90,6 +90,8 @@ Clone o repositório para sua máquina local:
 ```bash
 git clone https://github.com/jardelva96/teste-desenvolvedor-pleno.git
 cd teste-desenvolvedor-pleno
+git checkout teste/jardel
+
 ```
 2. Instalando Dependências
 ## Para o Frontend
