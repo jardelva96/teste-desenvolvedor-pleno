@@ -105,7 +105,6 @@ npm start
 Certifique-se de ter o .NET Core SDK instalado. Navegue até a pasta backend e restaure as dependências:
 ```bash
 cd backend
-dotnet restore
 dotnet run
 ```
 3. Rodando o Projeto com Docker
