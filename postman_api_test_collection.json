@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "Product Management API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5235/api/Categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Categories"]
+            }
+          }
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Eletrônicos\",\n  \"description\": \"Produtos eletrônicos de alta tecnologia\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5235/api/Categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Categories"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suppliers",
+      "item": [
+        {
+          "name": "Get Suppliers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5235/api/Suppliers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Suppliers"]
+            }
+          }
+        },
+        {
+          "name": "Create Supplier",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Fornecedor A\",\n  \"address\": \"Rua 1, Centro\",\n  \"cnpj\": \"12345678901234\",\n  \"phone\": \"11999999999\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5235/api/Suppliers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Suppliers"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5235/api/Products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Notebook\",\n  \"price\": 4500.00,\n  \"categoryId\": 1,\n  \"productSuppliers\": [\n    { \"suppliersId\": 1 },\n    { \"suppliersId\": 2 }\n  ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5235/api/Products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Products"]
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"Notebook Atualizado\",\n  \"price\": 4000.00,\n  \"categoryId\": 1,\n  \"productSuppliers\": [\n    { \"suppliersId\": 2 }\n  ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5235/api/Products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5235/api/Products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Products", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
