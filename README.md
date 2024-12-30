@@ -63,11 +63,11 @@ O objetivo do desafio é criar uma aplicação para **gestão de produtos**. A s
 
 ### Backend
 
-- **C#** (C Sharp)
-- **.NET Core / .NET 6+**
+- **C#**
+- **.NET Core
 - **Entity Framework Core**
 - **JWT (JSON Web Token)** - para autenticação
-- **MySQL** (ou **SQL Server**, **Informix**)
+- **SQL Server**
 
 ### Frontend
 
