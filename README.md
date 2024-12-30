@@ -92,14 +92,14 @@ git clone https://github.com/jardelva96/teste-desenvolvedor-pleno.git
 cd teste-desenvolvedor-pleno
 ```
 2. Instalando Dependências
-##Para o Frontend
+## Para o Frontend
 Entre na pasta frontend e instale as dependências:
 ```bash
 cd frontend
 npm install --legacy-peer-deps
 npm start
 ```
-##Para o Backend
+## Para o Backend
 Certifique-se de ter o .NET Core SDK instalado. Navegue até a pasta backend e restaure as dependências:
 ```bash
 cd backend
