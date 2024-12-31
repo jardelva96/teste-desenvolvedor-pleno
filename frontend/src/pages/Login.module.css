@@ -1,17 +1,15 @@
-/* Fundo e Neve */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;    /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;  
   min-height: 100vh;
   position: relative;
 }
 
-/* Neve */
 .snowflake {
   position: absolute;
   top: -10px;
@@ -42,28 +40,25 @@ body {
   }
 }
 
-/* Estilo do Contêiner */
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff; /* Fundo branco */
-  border-radius: 10px;       /* Bordas arredondadas */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
-  padding: 30px 20px;       /* Espaçamento interno */
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px; 
   width: 100%;
-  max-width: 400px;         /* Largura máxima do contêiner */
+  max-width: 400px;  
   text-align: center;
 }
 
-/* Título */
 h2 {
   font-size: 28px;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* Árvore de Natal Animada */
 .tree {
   font-size: 60px;
   color: #008000;
@@ -82,7 +77,6 @@ h2 {
   }
 }
 
-/* Formulário de Login */
 .input-group {
   margin-bottom: 20px;
   text-align: left;
