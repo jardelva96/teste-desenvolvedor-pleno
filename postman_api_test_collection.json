@@ -1,6 +1,7 @@
 {
   "info": {
     "name": "Product Management API",
+    "description": "API para gestão de produtos, categorias e fornecedores.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -17,16 +18,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\"\n}"
+            },
             "url": {
               "raw": "http://localhost:5235/api/Auth/Login",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Auth", "Login"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\"\n}"
             }
           }
         },
@@ -40,16 +41,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\",\n  \"email\": \"string\"\n}"
+            },
             "url": {
               "raw": "http://localhost:5235/api/Auth/Register",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Auth", "Register"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\",\n  \"email\": \"string\"\n}"
             }
           }
         }
@@ -81,16 +82,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"products\": []\n}"
+            },
             "url": {
               "raw": "http://localhost:5235/api/Categories",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Categories"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Categoria Exemplo\",\n  \"description\": \"Descrição da Categoria\"\n}"
             }
           }
         }
@@ -122,16 +123,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Produto Exemplo\",\n  \"price\": 99,\n  \"categoryId\": 2,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
+            },
             "url": {
               "raw": "http://localhost:5235/api/Products",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Products"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Produto Exemplo\",\n  \"price\": 99.99,\n  \"categoryId\": 1,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
             }
           }
         },
@@ -145,16 +146,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"Produto Atualizado\",\n  \"price\": 2,\n  \"categoryId\": 2,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
+            },
             "url": {
-              "raw": "http://localhost:5235/api/Products/1",
+              "raw": "http://localhost:5235/api/Products/{id}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
-              "path": ["api", "Products", "1"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": 1,\n  \"name\": \"Produto Atualizado\",\n  \"price\": 149.99,\n  \"categoryId\": 2,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
+              "path": ["api", "Products", "{id}"]
             }
           }
         },
@@ -163,11 +164,11 @@
           "request": {
             "method": "DELETE",
             "url": {
-              "raw": "http://localhost:5235/api/Products/1",
+              "raw": "http://localhost:5235/api/Products/{id}",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
-              "path": ["api", "Products", "1"]
+              "path": ["api", "Products", "{id}"]
             }
           }
         }
@@ -199,16 +200,16 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"cnpj\": \"string\",\n  \"phone\": \"string\",\n  \"productSuppliers\": []\n}"
+            },
             "url": {
               "raw": "http://localhost:5235/api/Suppliers",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Suppliers"]
-            },
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Fornecedor Exemplo\",\n  \"address\": \"Rua Exemplo, 123\",\n  \"cnpj\": \"12345678901234\",\n  \"phone\": \"11987654321\",\n  \"productSuppliers\": []\n}"
             }
           }
         }
