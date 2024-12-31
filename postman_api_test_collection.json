@@ -1,9 +1,60 @@
 {
   "info": {
-    "name": "Product Management API Tests",
+    "name": "Product Management API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5235/api/Auth/Login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Auth", "Login"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5235/api/Auth/Register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Auth", "Register"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"string\",\n  \"password\": \"string\",\n  \"email\": \"string\"\n}"
+            }
+          }
+        }
+      ]
+    },
     {
       "name": "Categories",
       "item": [
@@ -11,7 +62,6 @@
           "name": "Get Categories",
           "request": {
             "method": "GET",
-            "header": [],
             "url": {
               "raw": "http://localhost:5235/api/Categories",
               "protocol": "http",
@@ -31,58 +81,16 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Eletrônicos\",\n  \"description\": \"Produtos eletrônicos de alta tecnologia\"\n}"
-            },
             "url": {
               "raw": "http://localhost:5235/api/Categories",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Categories"]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "Suppliers",
-      "item": [
-        {
-          "name": "Get Suppliers",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:5235/api/Suppliers",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5235",
-              "path": ["api", "Suppliers"]
-            }
-          }
-        },
-        {
-          "name": "Create Supplier",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
+            },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Fornecedor A\",\n  \"address\": \"Rua 1, Centro\",\n  \"cnpj\": \"12345678901234\",\n  \"phone\": \"11999999999\"\n}"
-            },
-            "url": {
-              "raw": "http://localhost:5235/api/Suppliers",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "5235",
-              "path": ["api", "Suppliers"]
+              "raw": "{\n  \"name\": \"Categoria Exemplo\",\n  \"description\": \"Descrição da Categoria\"\n}"
             }
           }
         }
@@ -95,7 +103,6 @@
           "name": "Get Products",
           "request": {
             "method": "GET",
-            "header": [],
             "url": {
               "raw": "http://localhost:5235/api/Products",
               "protocol": "http",
@@ -115,16 +122,16 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Notebook\",\n  \"price\": 4500.00,\n  \"categoryId\": 1,\n  \"productSuppliers\": [\n    { \"suppliersId\": 1 },\n    { \"suppliersId\": 2 }\n  ]\n}"
-            },
             "url": {
               "raw": "http://localhost:5235/api/Products",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
               "path": ["api", "Products"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Produto Exemplo\",\n  \"price\": 99.99,\n  \"categoryId\": 1,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
             }
           }
         },
@@ -138,10 +145,23 @@
                 "value": "application/json"
               }
             ],
+            "url": {
+              "raw": "http://localhost:5235/api/Products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Products", "1"]
+            },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 1,\n  \"name\": \"Notebook Atualizado\",\n  \"price\": 4000.00,\n  \"categoryId\": 1,\n  \"productSuppliers\": [\n    { \"suppliersId\": 2 }\n  ]\n}"
-            },
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"Produto Atualizado\",\n  \"price\": 149.99,\n  \"categoryId\": 2,\n  \"productSuppliers\": [],\n  \"isDeleted\": false\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
             "url": {
               "raw": "http://localhost:5235/api/Products/1",
               "protocol": "http",
@@ -150,18 +170,45 @@
               "path": ["api", "Products", "1"]
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "name": "Suppliers",
+      "item": [
         {
-          "name": "Delete Product",
+          "name": "Get Suppliers",
           "request": {
-            "method": "DELETE",
-            "header": [],
+            "method": "GET",
             "url": {
-              "raw": "http://localhost:5235/api/Products/1",
+              "raw": "http://localhost:5235/api/Suppliers",
               "protocol": "http",
               "host": ["localhost"],
               "port": "5235",
-              "path": ["api", "Products", "1"]
+              "path": ["api", "Suppliers"]
+            }
+          }
+        },
+        {
+          "name": "Create Supplier",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5235/api/Suppliers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5235",
+              "path": ["api", "Suppliers"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Fornecedor Exemplo\",\n  \"address\": \"Rua Exemplo, 123\",\n  \"cnpj\": \"12345678901234\",\n  \"phone\": \"11987654321\",\n  \"productSuppliers\": []\n}"
             }
           }
         }
