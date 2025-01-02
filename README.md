@@ -107,11 +107,6 @@ Certifique-se de ter o .NET Core SDK instalado.
 cd backend
 dotnet run
 ```
-3. Rodando o Projeto com Docker
-- Para rodar o projeto com Docker, use o comando abaixo:
-```bash
-docker-compose up --build
-```
 
 - Isso criará os contêineres necessários e iniciará o projeto.
 
